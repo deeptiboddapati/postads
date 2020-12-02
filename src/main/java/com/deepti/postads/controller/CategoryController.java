@@ -1,10 +1,10 @@
-package com.deepti.giflib.controller;
+package com.deepti.postads.controller;
 
 
-import com.deepti.giflib.data.CategoryRepository;
-import com.deepti.giflib.data.GifRepository;
-import com.deepti.giflib.model.Category;
-import com.deepti.giflib.model.Gif;
+import com.deepti.postads.data.CategoryRepository;
+import com.deepti.postads.data.AdRepository;
+import com.deepti.postads.model.Category;
+import com.deepti.postads.model.Ad;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -18,7 +18,7 @@ public class CategoryController {
     @Autowired
     private CategoryRepository categoryRepository;
     @Autowired
-    private GifRepository gifRepository;
+    private AdRepository adRepository;
     @RequestMapping(value = "/categories")
     public String listCategories(ModelMap modelMap){
         List<Category> allCategories= categoryRepository.getAllCategories();
@@ -30,8 +30,8 @@ public class CategoryController {
         Category category = categoryRepository.findById(id);
         modelMap.put("category", category);
 
-        List<Gif> gifs = gifRepository.findByCategoryId(id);
-        modelMap.put("gifs", gifs);
+        List<Ad> ads = adRepository.findByCategoryId(id);
+        modelMap.put("ads", ads);
         return "category";
     }
 }

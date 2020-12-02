@@ -1,4 +1,4 @@
-package com.deepti.giflib;
+package com.deepti.postads;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;

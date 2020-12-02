@@ -1,31 +1,30 @@
-package com.deepti.giflib.controller;
+package com.deepti.postads.controller;
 
-import com.deepti.giflib.data.GifRepository;
-import com.deepti.giflib.model.Gif;
+import com.deepti.postads.data.AdRepository;
+import com.deepti.postads.model.Ad;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.time.LocalDate;
 import java.util.List;
 
 @Controller
-public class GifController {
+public class AdsController {
     @Autowired
-    private GifRepository gifRepository;
+    private AdRepository adRepository;
     @RequestMapping(value = "/")
     public String listGifs(ModelMap modelMap){
-        List<Gif> allGifs = gifRepository.getAllGifs();
-        modelMap.put("gifs", allGifs);
+        List<Ad> allAds = adRepository.getAllGifs();
+        modelMap.put("ads", allAds);
         return "home";
     }
 
-    @RequestMapping("/gif/{name}")
+    @RequestMapping("/ad/{name}")
     public String gifDetails(@PathVariable String name, ModelMap modelMap) {
-        Gif gif = gifRepository.findByName(name);
-        modelMap.put("gif", gif);
-        return "gif-details";
+        Ad ad = adRepository.findByName(name);
+        modelMap.put("ad", ad);
+        return "ad-details";
     }
 }

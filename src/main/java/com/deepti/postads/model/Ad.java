@@ -1,16 +1,15 @@
-package com.deepti.giflib.model;
+package com.deepti.postads.model;
 
 import java.time.LocalDate;
-import java.util.List;
 
-public class Gif {
+public class Ad {
     private String name;
     private LocalDate dateUploaded;
     private String username;
     private Boolean favorite;
     private int categoryId;
 
-    public Gif(String name, LocalDate dateUploaded, String username, Boolean favorite, int categoryId) {
+    public Ad(String name, LocalDate dateUploaded, String username, Boolean favorite, int categoryId) {
         this.name = name;
         this.dateUploaded = dateUploaded;
         this.username = username;

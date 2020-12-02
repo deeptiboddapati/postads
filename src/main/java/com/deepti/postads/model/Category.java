@@ -1,4 +1,4 @@
-package com.deepti.giflib.model;
+package com.deepti.postads.model;
 
 public class Category {
     private int id;

@@ -1,6 +1,6 @@
-package com.deepti.giflib.data;
+package com.deepti.postads.data;
 
-import com.deepti.giflib.model.Category;
+import com.deepti.postads.model.Category;
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
