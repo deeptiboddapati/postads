@@ -11,13 +11,15 @@ import java.util.List;
 public class AdRepository {
 
     private static final List<Ad> ALL_ADS = Arrays.asList(
-            new Ad("android-explosion", LocalDate.of(2015,2,13), "Chris Ramacciotti", false, 2),
-            new Ad("ben-and-mike", LocalDate.of(2015,10,30), "Ben Jakuben", true, 2),
-            new Ad("book-dominos", LocalDate.of(2015,9,15), "Craig Dennis", false, 2),
-            new Ad("compiler-bot", LocalDate.of(2015,2,13), "Ada Lovelace", true, 2),
-            new Ad("cowboy-coder", LocalDate.of(2015,2,13), "Grace Hopper", false, 3),
-            new Ad("infinite-andrew", LocalDate.of(2015,8,23), "Marissa Mayer", true, 3)
-    );
+            new Ad("bed", LocalDate.of(2015,2,13), "Deepti", false, 2),
+            new Ad("bed2", LocalDate.of(2015,10,30), "Socrates", true, 2),
+            new Ad("chair", LocalDate.of(2015,9,15), "Aristotle", false, 2),
+            new Ad("HangingChair", LocalDate.of(2015,2,13), "Hagel", true, 2),
+            new Ad("car", LocalDate.of(2015,2,13), "Plato", false, 4),
+            new Ad("car2", LocalDate.of(2015,8,23), "Diogenes", true, 4),
+            new Ad("dog", LocalDate.of(2015,8,23), "Diogenes", true, 3),
+            new Ad("cat", LocalDate.of(2015,8,23), "Diogenes", true, 3)
+            );
     public Ad findByName(String name ){
         for( Ad ad : ALL_ADS){
             if(ad.getName().equals(name)){

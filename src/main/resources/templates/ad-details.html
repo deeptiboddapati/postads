@@ -46,7 +46,7 @@
     <div class="ad-detail container">
         <div class="frame row">
             <div class="col s12">
-                <img th:src="@{'/ads/' + ${ad.name} + '.gif'}" alt="ad" />
+                <img th:src="@{'/img/' + ${ad.name} + '.jpg'}" alt="ad" />
                 <a href="#" th:class="(${ad.favorite} ? 'un' : '') + 'mark favorite'"></a>
             </div>
         </div>

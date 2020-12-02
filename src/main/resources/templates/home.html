@@ -48,7 +48,7 @@
 
             <div th:each="ad: ${ads}" class="col s12 l4">
                 <a th:href="@{'/ad/'+ ${ad.name}}">
-                    <img th:src="@{'/ads/'+ ${ad.name}+'.gif'}" />
+                    <img th:src="@{'/img/'+ ${ad.name}+'.jpg'}" />
                     <a href="#" class="mark favorite"></a>
                 </a>
             </div>
