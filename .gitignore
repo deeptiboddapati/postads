@@ -32,7 +32,4 @@ build/
 ### VS Code ###
 .vscode/
 /.gradle/
-/.mvn/
-.mvn/wrapper/MavenWrapperDownloader.java
-.mvn/wrapper/maven-wrapper.properties
-.mvn/wrapper/maven-wrapper.jar
+
