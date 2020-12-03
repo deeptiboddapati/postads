@@ -46,24 +46,27 @@
     <div class="ad-detail container">
         <div class="frame row">
             <div class="col s12">
+                <h1 th:text="${ad.name}">Couch</h1>
                 <img th:src="@{'/img/' + ${ad.name} + '.jpg'}" alt="ad" />
-                <a href="#" th:class="(${ad.favorite} ? 'un' : '') + 'mark favorite'"></a>
             </div>
         </div>
         <div class="row">
             <div class="col s12 l6">
                 <div class="meta row">
                     <div class="col s12">
-                        <h4 th:text="${ad.username}">Craig Dennis</h4>
+                        <h4 th:text="${ad.user_id}">3</h4>
                         <p th:text="'Uploaded on ' + ${ad.dateUploaded}">Uploaded on Oct 30 2015</p>
                     </div>
                 </div>
             </div>
             <div class="col s12 l6">
-                <div class="share">
-                    <a class="btn right" href="#">Copy</a>
-                    <span th:text="'http://ad.fy/' + ${ad.name}">URL</span>
-                </div>
+                <p th:text="${category.name}">Technology</p>
+            </div>
+            <div class="col s12 l6">
+                <p th:text="${ad.price}">3.50</p>
+            </div>
+            <div class="col s12 l6">
+                <p th:text="${ad.description}">Lorem Ipsum</p>
             </div>
         </div>
     </div>
