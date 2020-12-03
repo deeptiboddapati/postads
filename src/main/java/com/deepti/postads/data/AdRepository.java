@@ -28,7 +28,7 @@ public class AdRepository {
         }
         return null;
     }
-    public List<Ad> getAllGifs(){
+    public List<Ad> getAllAds(){
         return ALL_ADS;
     }
     public List<Ad> findByCategoryId(int id){

@@ -19,14 +19,14 @@ public class AdsController {
     @Autowired
     private AdRepository adRepository;
     @RequestMapping(value = "/")
-    public String listGifs(ModelMap modelMap){
-        List<Ad> allAds = adRepository.getAllGifs();
+    public String listAds(ModelMap modelMap){
+        List<Ad> allAds = adRepository.getAllAds();
         modelMap.put("ads", allAds);
         return "home";
     }
 
     @RequestMapping("/ad/{name}")
-    public String gifDetails(@PathVariable String name, ModelMap modelMap) {
+    public String adDetails(@PathVariable String name, ModelMap modelMap) {
         Ad ad = adRepository.findByName(name);
         modelMap.put("ad", ad);
 
