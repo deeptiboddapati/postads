@@ -2,8 +2,10 @@ package com.deepti.postads.controller;
 
 import com.deepti.postads.data.AdRepository;
 import com.deepti.postads.data.CategoryRepository;
+import com.deepti.postads.data.UserRepository;
 import com.deepti.postads.model.Ad;
 import com.deepti.postads.model.Category;
+import com.deepti.postads.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -18,6 +20,10 @@ public class AdsController {
     private CategoryRepository categoryRepository;
     @Autowired
     private AdRepository adRepository;
+
+    @Autowired
+    private UserRepository userRepository;
+
     @RequestMapping(value = "/")
     public String listAds(ModelMap modelMap){
         List<Ad> allAds = adRepository.getAllAds();
@@ -32,6 +38,9 @@ public class AdsController {
 
         Category category = categoryRepository.findById(ad.getCategoryId());
         modelMap.put("category", category);
+
+        User user = userRepository.findById(ad.getUser_id());
+        modelMap.put("user", user);
         return "ad-details";
     }
 }
